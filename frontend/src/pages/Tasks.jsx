@@ -21,7 +21,7 @@ const Tasks = () => {
   // ================= FETCH TASKS =================
   const fetchTasks = async () => {
     try {
-      const res = await axios.get(
+      const res = await await axios.get(
         "https://rbs-app.onrender.com/api/v1/tasks/mytasks",
         { withCredentials: true },
       );
