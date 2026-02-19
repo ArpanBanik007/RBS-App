@@ -141,11 +141,13 @@ const loginUser = asyncHandler(async (req, res) => {
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken");
 
     // Cookie options
+   // Cookie options
     const options = {
-  httpOnly: true,
-  secure: true,       
-  sameSite: "none",   
-};
+        httpOnly: true,
+        secure: true, // Set to `true` in production with HTTPS
+        sameSite: "none",
+    };
+
 
 
     // Send response with cookies
