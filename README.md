@@ -2,7 +2,7 @@
 
 ## 🔗 Live Links
 Frontend: https://rbs-app-three.vercel.app/
-Backend API: https://rbs-app.onrender.com/api/v1
+Backend API: https://rbs-app.onrender.com/
 
 ## 🚀 Tech Stack
 - Node.js
