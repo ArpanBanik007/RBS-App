@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8007/api/v1",
+  baseURL: "https://rbs-app.onrender.com/api/v1",
   withCredentials: true,
 });
 

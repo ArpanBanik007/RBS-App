@@ -18,7 +18,7 @@ function AdminAllTasks() {
       setError("");
 
       const res = await axios.get(
-        "http://localhost:8007/api/v1/tasks/alltasks",
+        "https://rbs-app.onrender.com/api/v1/tasks/alltasks",
         { withCredentials: true },
       );
 
@@ -41,7 +41,7 @@ function AdminAllTasks() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:8007/api/v1/tasks/${id}`, {
+      await axios.delete(`https://rbs-app.onrender.com/api/v1/tasks/${id}`, {
         withCredentials: true,
       });
 

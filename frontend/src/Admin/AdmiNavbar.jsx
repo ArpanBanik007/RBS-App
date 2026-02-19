@@ -14,7 +14,7 @@ function AdminNavbar() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:8007/api/v1/users/logout",
+        "https://rbs-app.onrender.com/api/v1/users/logout",
         {},
         { withCredentials: true },
       );

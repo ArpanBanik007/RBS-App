@@ -36,9 +36,13 @@ function CreateTaskpage() {
       setError("");
       setMessage("");
 
-      await axios.post("http://localhost:8007/api/v1/tasks/create", formData, {
-        withCredentials: true,
-      });
+      await axios.post(
+        "https://rbs-app.onrender.com/api/v1/tasks/create",
+        formData,
+        {
+          withCredentials: true,
+        },
+      );
 
       // 🔥 Redirect after success
       navigate("/home");

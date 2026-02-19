@@ -12,7 +12,7 @@ function AdminHome() {
       setError("");
 
       const res = await axios.get(
-        "http://localhost:8007/api/v1/users/currentUser",
+        "https://rbs-app.onrender.com/api/v1/users/currentUser",
         {
           withCredentials: true,
         },

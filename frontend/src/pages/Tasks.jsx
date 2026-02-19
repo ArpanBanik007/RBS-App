@@ -22,7 +22,7 @@ const Tasks = () => {
   const fetchTasks = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8007/api/v1/tasks/mytasks",
+        "https://rbs-app.onrender.com/api/v1/tasks/mytasks",
         { withCredentials: true },
       );
       setTasks(res.data.data || []);
@@ -38,7 +38,7 @@ const Tasks = () => {
     if (!window.confirm("Delete this task?")) return;
 
     try {
-      await axios.delete(`http://localhost:8007/api/v1/tasks/${id}`, {
+      await axios.delete(`https://rbs-app.onrender.com/api/v1/tasks/${id}`, {
         withCredentials: true,
       });
 

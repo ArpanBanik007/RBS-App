@@ -88,7 +88,7 @@ export default function SignUp() {
         formDataToSend.append("coverImage", formData.coverImage);
 
       const res = await axios.post(
-        "http://localhost:8007/api/v1/users/register",
+        "https://rbs-app.onrender.com/api/v1/users/register",
         formDataToSend,
         {
           withCredentials: true,

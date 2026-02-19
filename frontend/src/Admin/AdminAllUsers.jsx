@@ -19,7 +19,7 @@ function AdminAllUsers() {
       setError("");
 
       const res = await axios.get(
-        "http://localhost:8007/api/v1/users/all-users",
+        "https://rbs-app.onrender.com/api/v1/users/all-users",
         { withCredentials: true },
       );
 
@@ -41,7 +41,7 @@ function AdminAllUsers() {
 
     try {
       await axios.delete(
-        `http://localhost:8007/api/v1/users/delete/${userId}`,
+        `https://rbs-app.onrender.com/api/v1/users/delete/${userId}`,
         { withCredentials: true },
       );
 

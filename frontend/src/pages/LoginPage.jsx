@@ -31,9 +31,9 @@ function LoginPage() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8007/api/v1/users/login",
+        "https://rbs-app.onrender.com/api/v1/users/login",
         formData,
-        { withCredentials: true }
+        { withCredentials: true },
       );
 
       const user = res?.data?.data?.user;
@@ -51,11 +51,9 @@ function LoginPage() {
           navigate("/home");
         }
       }, 1000);
-
     } catch (error) {
       setError(
-        error.response?.data?.message ||
-        "Something went wrong or Login failed"
+        error.response?.data?.message || "Something went wrong or Login failed",
       );
     } finally {
       setLoading(false);
@@ -65,11 +63,8 @@ function LoginPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-slate-700">
       <div className="bg-white p-6 rounded-2xl shadow-md w-96">
-
         {error && (
-          <p className="mb-4 text-center text-red-600 font-medium">
-            {error}
-          </p>
+          <p className="mb-4 text-center text-red-600 font-medium">{error}</p>
         )}
 
         {success && (
@@ -78,9 +73,7 @@ function LoginPage() {
           </p>
         )}
 
-        <h2 className="text-xl font-semibold mb-4 text-center">
-          Login
-        </h2>
+        <h2 className="text-xl font-semibold mb-4 text-center">Login</h2>
 
         <form onSubmit={handelSubmit}>
           <InputField
@@ -116,7 +109,6 @@ function LoginPage() {
             Signup
           </button>
         </p>
-
       </div>
     </div>
   );
